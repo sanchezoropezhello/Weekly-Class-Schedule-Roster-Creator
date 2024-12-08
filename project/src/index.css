@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply min-h-screen bg-gradient-to-br from-indigo-500/20 via-purple-500/20 to-pink-500/20;
+    backdrop-filter: blur(100px);
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 rounded-2xl shadow-xl;
+  }
+  
+  .task-card {
+    @apply glass-card p-4 cursor-move hover:scale-102 transition-all duration-200;
+  }
+
+  .time-slot {
+    @apply min-h-[6rem] border-b border-white/10 p-2 transition-colors;
+  }
+
+  .time-slot:hover {
+    @apply bg-white/5;
+  }
+}
